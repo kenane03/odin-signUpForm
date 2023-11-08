@@ -7,46 +7,57 @@
     <link rel="stylesheet" href="./assets/styles/styles.css">
 </head>
 <body>
-    <div>
-        <section>
-            <img id="background-img" src="./assets/images/background-img.jpg" alt="Aldebaran image">
-            <img id="navette-logo" src="./assets/images/navette.svg" alt="navette logo">
-            <h1>Space odyssey</h1>
+    <div class="wrapper">
+        <section class="img-side">
+            <div class="logo-text">
+                <div class="background-clr"></div>
+                <img id="navette-logo" src="./assets/images/navette.svg" alt="navette logo">
+                <h1 class="main-title">Space odyssey</h1>
+            </div>
         </section>
-        <section>
+        <section class="form-side">
             <header>
-                <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started.</p>
-                <p>You know you want to</p>
+                <p class="paragraph-one">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started.</p>
+                <p class="paragraph-two">You know you want to.</p>
             </header>
             <main>
                 <form action="" method="post">
                     <div class="form">
                         <div class="left">
-                            <label for="user-first-name">FIRST NAME</label>
-                            <input type="text" id="user-first-name" name="user-first-name">
-                            <label for="user-email">EMAIL</label>
-                            <input type="email" id="user-email" name="user-email">
-                            <label for="user-password">PASSWORD</label>
-                            <input type="password" id="user-password" name="user-password">
+                            <div class="form-item">
+                                <label for="user-first-name">FIRST NAME</label>
+                                <input type="text" id="user-first-name" name="user-first-name" required autocomplete="given-name">
+                            </div>
+                            <div class="form-item">
+                                <label for="user-email">EMAIL</label>
+                                <input type="email" id="user-email" name="user-email" required autocomplete="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$">
+                            </div>
+                            <div class="form-item">
+                                <label for="user-password">PASSWORD</label>
+                                <input type="password" id="user-password" name="user-password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                            </div>
                         </div>
                         <div class="right">
-                            <label for="user-last-name">LAST NAME</label>
-                            <input type="text" id="user-last-name" name="user-last-name">
-                            <label for="user-phone-num">PHONE NUMBER</label>
-                            <input type="tel" id="user-phone-num" name="user-phone-num">
-                            <label for="user-confirm-password">CONFIRM PASSWORD</label>
-                            <input type="text" id="user-confirm-password" name="user-confirm-password">
+                            <div class="form-item">
+                                <label for="user-last-name">LAST NAME</label>
+                                <input type="text" id="user-last-name" name="user-last-name" required autocomplete="family-name">
+                            </div>
+                            <div class="form-item">
+                                <label for="user-phone-num">PHONE NUMBER</label>
+                                <input type="tel" id="user-phone-num" name="user-phone-num" autocomplete="tel">
+                            </div>
+                            <div class="form-item">
+                                <label for="user-confirm-password">CONFIRM PASSWORD</label>
+                                <input type="password" id="user-confirm-password" name="user-confirm-password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                            </div>
                         </div>
                     </div>
-                    <button type="submit">Create account</button>
+                    <div class="submit-log">
+                        <button id="submit" type="submit">Create account</button>
+                        <p>Alreay have an account ? <a href="#">Log in</a></p>
+                    </div>
                 </form>
-                <p>Alreay have an account ? <a href="#">Log in</a></p>
             </main>
-            <footer>
-                <p>Photo by <a href="https://unsplash.com/@aldebarans">Aldebaran S</a> on <a href="https://unsplash.com/">Unsplash</a></p>
-
-                <p>Copyright © 2023 kenane03</p>
-            </footer>
         </section>
     </div>
     
